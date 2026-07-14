@@ -1,0 +1,64 @@
+# Codesoft task-4
+# Recommendation System
+
+# Dictionary containing categories and recommendations
+recommendations = {
+    "action": [
+        "Avengers: Endgame",
+        "John Wick",
+        "Mad Max: Fury Road"
+    ],
+    "comedy": [
+        "3 Idiots",
+        "The Hangover",
+        "Welcome"
+    ],
+    "horror": [
+        "The Conjuring",
+        "Insidious",
+        "Annabelle"
+    ],
+    "romance": [
+        "Titanic",
+        "The Notebook",
+        "Aashiqui 2"
+    ],
+    "science fiction": [
+        "Interstellar",
+        "Inception",
+        "The Matrix"
+    ],
+    "animation": [
+        "Toy Story",
+        "Frozen",
+        "Coco"
+    ],
+    "books": [
+        "Atomic Habits",
+        "Rich Dad Poor Dad",
+        "The Alchemist"
+    ]
+}
+
+print("=" * 45)
+print("      SIMPLE RECOMMENDATION SYSTEM")
+print("=" * 45)
+
+name = input("Enter your name: ")
+print(f"\nHello {name}!")
+
+print("\nAvailable Categories:")
+for category in recommendations:
+    print("-", category.title())
+
+choice = input("\nEnter your favorite category: ").lower()
+
+if choice in recommendations:
+    print(f"\nRecommended items for {choice.title()}:\n")
+    for i, item in enumerate(recommendations[choice], start=1):
+        print(f"{i}. {item}")
+else:
+    print("\nSorry! Category not found.")
+    print("Please choose from the available categories.")
+
+print("\nThank you for using the Recommendation System!")
