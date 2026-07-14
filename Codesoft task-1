@@ -1,0 +1,119 @@
+#Rule-based chatbot !!!
+#codesoft internship - Task 1
+
+from datetime import datetime
+
+print("=" * 50)
+print("🤖 Welcome to Rule-Based Chatbot")
+print("Type 'bye' to exit the chatbot.")
+print("=" * 50)
+
+while True:
+    user = input("\nYou: ").lower()
+
+    # Greetings
+    if user in ["hi", "hello", "hey", "hii"]:
+        print("Bot: Hello! Nice to meet you.")
+
+    elif "good morning" in user:
+        print("Bot: Good Morning! Have a wonderful day!")
+
+    elif "good afternoon" in user:
+        print("Bot: Good Afternoon!")
+
+    elif "good evening" in user:
+        print("Bot: Good Evening!")
+
+    # About chatbot
+    elif "your name" in user:
+        print("Bot: My name is RuleBot.")
+
+    elif "who made you" in user or "who created you" in user:
+        print("Bot: I was created using Python for the CodeSoft Internship.")
+
+    elif "how are you" in user:
+        print("Bot: I'm fine. Thanks for asking!")
+
+    elif "what can you do" in user:
+        print("Bot: I can answer basic questions like time, date, programming, AI, and more.")
+
+    # Programming
+    elif "python" in user:
+        print("Bot: Python is a simple and powerful programming language.")
+
+    elif "java" in user:
+        print("Bot: Java is an object-oriented programming language.")
+
+    elif "c++" in user or "cpp" in user:
+        print("Bot: C++ is widely used for competitive programming and software development.")
+
+    elif "html" in user:
+        print("Bot: HTML is used to create web pages.")
+
+    elif "css" in user:
+        print("Bot: CSS is used to style web pages.")
+
+    elif "javascript" in user:
+        print("Bot: JavaScript makes websites interactive.")
+
+    elif "ai" in user or "artificial intelligence" in user:
+        print("Bot: AI enables machines to learn and make decisions.")
+
+    elif "machine learning" in user:
+        print("Bot: Machine Learning is a branch of AI where systems learn from data.")
+
+    # Time & Date
+    elif "time" in user:
+        print("Bot: Current Time is", datetime.now().strftime("%I:%M %p"))
+
+    elif "date" in user:
+        print("Bot: Today's Date is", datetime.now().strftime("%d-%m-%Y"))
+
+    elif "day" in user:
+        print("Bot: Today is", datetime.now().strftime("%A"))
+
+    # General Knowledge
+    elif "capital of india" in user:
+        print("Bot: The capital of India is New Delhi.")
+
+    elif "prime minister" in user:
+        print("Bot: The Prime Minister of India is Narendra Modi.")
+
+    elif "largest planet" in user:
+        print("Bot: Jupiter is the largest planet in our Solar System.")
+
+    elif "smallest planet" in user:
+        print("Bot: Mercury is the smallest planet in our Solar System.")
+
+    elif "sun" in user:
+        print("Bot: The Sun is a star at the center of our Solar System.")
+
+    elif "moon" in user:
+        print("Bot: The Moon is Earth's natural satellite.")
+
+    # Math
+    elif "2+2" in user or "2 + 2" in user:
+        print("Bot: The answer is 4.")
+
+    elif "5*5" in user or "5 x 5" in user:
+        print("Bot: The answer is 25.")
+
+    # Personal Conversation
+    elif "thank" in user:
+        print("Bot: You're welcome! 😊")
+
+    elif "sorry" in user:
+        print("Bot: No problem!")
+
+    elif "i love you" in user:
+        print("Bot: Thank you! 😊")
+
+    elif "joke" in user:
+        print("Bot: Why do programmers prefer Python? Because it's easy to 'byte' into coding!")
+
+    elif "bye" == user:
+        print("Bot: Goodbye! Have a great day! 👋")
+        break
+
+    else:
+        print("Bot: Sorry, I don't understand that. Please ask another question.")
